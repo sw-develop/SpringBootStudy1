@@ -1,0 +1,6 @@
+insert into customer(name, address, primary_contact) values('fordevelop', '서울시 광진구', 0)
+    insert into customer(name, address, primary_contact) values('fordevelop', '서울시 서대문구', 1)
+insert into customer(name, address, primary_contact) values('bydevelop', '서울시 서대문구', 1)
+insert into customer(name, address, primary_contact) values('sewon', '서울시 서대문구', 0)
+insert into customer(name, address, primary_contact) values('Pooh', '서울시 광진구', 1)
+insert into customer(name, address, primary_contact) values('Snoopy', '서울시 동작구', 0)
