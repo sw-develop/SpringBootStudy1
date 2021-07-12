@@ -99,13 +99,9 @@ import org.springframework.data.repository.CrudRepository;
 public interface CustomerRepository extends CrudRepository<Customer, Integer>{}
 ```
 
-→ CrudRepository 인터페이스를 상속받으므로, 해당 인터페이스에서 제공하는 메서드들을 모두 사용 가능함
+→ CrudRepository 인터페이스를 상속받으므로, 해당 인터페이스에서 제공하는 메서드들을 모두 사용 가능함(지정한 Domain Type에 대한 CRUD 메서드 수행 가능)
 
 → CrudRepository<T, ID>에서 T : Entity, ID : PK의 타입   
-
-
-
-++ 궁금한 점 추가 조사하기! 
 
 #### 3. Controller 생성
 
@@ -197,12 +193,6 @@ public Customer putCustomer(Customer customer){
 수정 후 : ![after](./img/update2.png)
 
 
-
-*개선할 부분!
-
-근데 controller 코드 상에서 조금 수정해야 할 부분 있는 듯, 원래 put이라는데 PK랑 변경 값만 보내면 해당 pk에 대한 객체 찾아서 변경할 값만 변경해줘야 하는데 현재는 변경 값만 보내면 나머지 값이 null로 설정됨.. 추가로 메서드 내에서 처리 필요할 듯! 찾아보자! 
-
-그리고 api도 customer/{id} 이렇게 전달해서 알아서 찾아서 해줘야 되는데 → param으로 전달하는 거랑 차이가 있는건가..? 
 
 ##### 3) DELETE
 
@@ -348,9 +338,9 @@ List<Customer> findVipList(String name, int primaryContact);
 
 → name과 primaryContact의 값을 param으로 전달 시 둘의 값을 모두 만족하는 객체만 반환됨을 알 수 있음    
 
-   
+---
 
-​    
+###      
 
 ##### 참고자료
 
